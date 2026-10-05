@@ -17,7 +17,13 @@
 
 ## Sobre mim
 
-Sou William Honda e este portfólio apresenta minha trajetória de aprendizagem nos Projetos Integrados do curso de Banco de Dados da FATEC São José dos Campos. Os projetos foram desenvolvidos entre o segundo semestre de 2024 e o primeiro semestre de 2026 nas organizações [BugBusters Suricatos](https://github.com/BugBusters-Suricatos) e [CaramelStray](https://github.com/CaramelStray).
+Sou William Honda, estudante de Tecnologia em Banco de Dados na FATEC São José dos Campos. Minha trajetória na área começou em 2019, quando iniciei o curso de Análise e Desenvolvimento de Sistemas (ADS). Em 2021, por conta da pandemia, precisei trancar o curso.
+
+Continuei trabalhando com suporte de nível 1 (N1) até surgir uma oportunidade de atuar como projetista mecânico, uma função ligada à minha formação técnica em Mecatrônica. Após cerca de um ano nessa experiência, tive certeza de que queria seguir na área de desenvolvimento de software e tecnologia da informação.
+
+Decidi retomar a faculdade, desta vez no curso de Banco de Dados, e foi nessa área que me encontrei. Atualmente, trabalho em uma empresa de sistemas ERP, que utiliza principalmente SQL Server e VB.NET. Essa vivência aproxima minha formação acadêmica do dia a dia profissional e reforça meu interesse por desenvolvimento e bancos de dados.
+
+Este portfólio reúne minha trajetória de aprendizagem nos Projetos Integrados do curso. Os projetos foram desenvolvidos entre o segundo semestre de 2024 e o primeiro semestre de 2026 nas organizações [BugBusters Suricatos](https://github.com/BugBusters-Suricatos) e [CaramelStray](https://github.com/CaramelStray).
 
 As seções abaixo distinguem o resultado construído coletivamente das minhas contribuições identificadas no histórico dos repositórios.
 
