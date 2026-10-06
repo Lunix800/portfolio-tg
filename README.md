@@ -91,10 +91,10 @@ A equipe desenvolveu uma aplicação de linha de comando organizada por menus e 
 
 ### Minhas contribuições
 
-- Implementei o procedimento de concatenação de strings.
-- Integrei opções para continuar a operação, voltar ao menu e finalizar o programa.
-- Corrigi leituras de valores utilizadas nas operações aritméticas e no cálculo fatorial.
-- Criei e organizei o arquivo de planejamento do projeto.
+- **Concatenação de strings:** implementei um procedimento em Portugol que solicita dois textos, concatena os valores e apresenta o resultado. Também armazenei o texto resultante para que ele pudesse ser utilizado como base na próxima concatenação, permitindo acrescentar novas strings sem digitar novamente o conteúdo anterior.
+- **Integração com os menus:** acrescentei a concatenação ao menu principal e desenvolvi seu fluxo de continuação, com opções para acrescentar outro texto, retornar ao menu ou encerrar o programa. Ajustei a numeração das opções para acomodar a nova funcionalidade e manter o acesso à finalização.
+- **Correções no código compartilhado:** corrigi comandos de leitura com parênteses ausentes nos fluxos de subtração, multiplicação e divisão, além de um comando de escrita incorreto no procedimento de fatorial. Essas alterações corrigiram problemas de sintaxe em trechos utilizados por outras operações da calculadora.
+- **Documentação do planejamento:** criei o arquivo de planejamento e o organizei em Markdown, reunindo as funcionalidades previstas por sprint e a indicação de tarefas concluídas ou pendentes. Esse registro tornou consultável o andamento das operações em Portugol e das atividades previstas para a versão em TypeScript.
 
 ### Evidências no GitHub
 
@@ -106,8 +106,18 @@ A equipe desenvolveu uma aplicação de linha de comando organizada por menus e 
 
 ### Competências desenvolvidas
 
-**Hard skills:** raciocínio algorítmico, decomposição em procedimentos, tratamento de entradas e manutenção de código compartilhado.<br>
-**Soft skills:** organização, atenção aos detalhes, comunicação pelo histórico de versões e colaboração em sprints.
+**Hard skills**
+
+- **Manipulação de strings e estado do programa:** pratiquei leitura, concatenação e atribuição de variáveis ao guardar o resultado de uma operação e reutilizá-lo na seguinte. Isso me ajudou a entender como os dados precisam ser preservados durante uma interação contínua com o usuário.
+- **Decomposição em procedimentos e controle de fluxo:** separei a concatenação de seu menu de continuação e conectei esses procedimentos ao menu principal. Aprendi a organizar uma funcionalidade considerando tanto o cálculo quanto os caminhos de retorno e encerramento.
+- **Leitura e correção de código existente:** identifiquei erros de sintaxe em comandos de entrada e saída de outras operações. Desenvolvi atenção à linguagem e à necessidade de compreender o trecho compartilhado antes de alterá-lo.
+- **Documentação com Markdown e versionamento com Git:** organizei o planejamento em um arquivo legível no GitHub e registrei alterações no repositório, relacionando a evolução do código ao acompanhamento das tarefas.
+
+**Soft skills**
+
+- **Organização:** ao distribuir as funcionalidades no planejamento por sprint e indicar seu andamento, exercitei a transformação de uma lista de requisitos em atividades que a equipe pudesse acompanhar.
+- **Atenção aos detalhes:** as correções de parênteses e comandos mostraram como pequenas falhas de escrita podem comprometer uma operação. Essa experiência reforçou o cuidado na revisão de código.
+- **Comunicação escrita e colaboração:** o planejamento documentado e os commits permitiram compartilhar o que havia sido alterado e o que ainda estava pendente, apoiando o trabalho em um mesmo repositório.
 
 ---
 
@@ -131,11 +141,12 @@ A equipe criou uma aplicação desktop em JavaFX com cadastros acadêmicos, grad
 
 ### Minhas contribuições
 
-- Integrei os seletores de curso e semestre da tela de indisponibilidade aos dados persistidos.
-- Configurei conversores para mostrar nomes legíveis e ordenei cursos, semestres e professores.
-- Relacionei os checkboxes da grade aos slots existentes no banco.
-- Recuperei indisponibilidades previamente cadastradas e desabilitei combinações inexistentes.
-- Acrescentei validações, mensagens de sucesso ou erro e atualizei o manual do usuário.
+- **Carregamento dos cadastros na tela de indisponibilidade:** substituí as listas fixas de cursos e semestres por consultas aos respectivos DAOs. Passei a trabalhar com objetos `Curso` e `Semestre` nos seletores, aproximando as opções da interface dos cadastros efetivamente armazenados no banco.
+- **Apresentação e organização das opções:** configurei `StringConverter` nos seletores de cursos, semestres e professores para exibir os nomes dos objetos. Também ordenei as listas por nome, facilitando a localização de uma opção pelo usuário.
+- **Montagem da grade de horários:** organizei os dias de segunda a sexta e obtive os intervalos de horário a partir dos slots cadastrados, removendo repetições e ordenando os valores. Associei cada checkbox ao slot correspondente por meio de um mapa, preservando a relação entre a célula visual e o registro utilizado na persistência.
+- **Recuperação das indisponibilidades:** carreguei os identificadores dos slots já marcados para o professor e usei esses dados para selecionar os checkboxes correspondentes. Mantive desabilitadas as células sem um slot válido, evitando que a interface oferecesse uma combinação inexistente no banco.
+- **Validação e retorno ao usuário:** acrescentei a verificação de professor selecionado antes de salvar e mensagens para falhas no carregamento dos cadastros e da grade. Organizei os alertas de erro e de sucesso em métodos auxiliares para comunicar o resultado das ações de forma consistente.
+- **Manual do usuário:** criei e posteriormente atualizei o documento de orientação do sistema, complementando a implementação com um material de apoio à utilização da aplicação.
 
 ### Evidências no GitHub
 
@@ -147,8 +158,19 @@ A equipe criou uma aplicação desktop em JavaFX com cadastros acadêmicos, grad
 
 ### Competências desenvolvidas
 
-**Hard skills:** interfaces orientadas a eventos, integração entre JavaFX e banco de dados, DAOs, coleções, ordenação e tratamento de exceções.<br>
-**Soft skills:** documentação, empatia com o usuário, comunicação escrita e cuidado com a consistência dos dados.
+**Hard skills**
+
+- **Integração entre JavaFX e persistência:** utilizei DAOs para preencher os componentes com objetos recuperados do banco. Aprendi a substituir dados fixos na interface por cadastros persistidos, mantendo a identificação dos registros selecionados.
+- **Representação de objetos em componentes visuais:** configurei `StringConverter` para exibir nomes sem reduzir os seletores a textos desconectados das entidades. Isso aprofundou minha compreensão da diferença entre o objeto utilizado pelo código e a informação mostrada ao usuário.
+- **Coleções e processamento de dados em Java:** utilizei listas, mapas, comparadores, streams e `Optional` para ordenar opções, extrair horários únicos e localizar o slot de cada célula da grade.
+- **Reconstrução do estado da interface:** relacionei os identificadores das indisponibilidades aos checkboxes. Aprendi a apresentar na tela um estado já salvo, em vez de tratar cada abertura como um cadastro novo.
+- **Validação e tratamento de exceções:** tratei falhas de consulta com `SQLException` e alertas, além de verificar a seleção do professor antes do salvamento. Passei a considerar os caminhos de erro como parte do comportamento da aplicação.
+
+**Soft skills**
+
+- **Empatia com o usuário:** a ordenação dos nomes, a recuperação das marcações e os alertas exigiram pensar em como uma pessoa identifica opções e entende o resultado de uma ação na tela.
+- **Comunicação escrita:** a criação e a atualização do manual exercitaram a explicação do uso do sistema para quem não acompanha sua implementação.
+- **Cuidado com a consistência das informações:** ao relacionar cada checkbox a um slot real e impedir seleções inexistentes, desenvolvi atenção à correspondência entre o que a interface permite e o que o banco representa.
 
 ---
 
@@ -172,12 +194,12 @@ O AllTalent é uma aplicação web para gestão de colaboradores e competências
 
 ### Minhas contribuições
 
-- Mantive versões, consultas, backups e ajustes do esquema PostgreSQL.
-- Acrescentei tabelas e colunas necessárias ao fluxo de avaliações.
-- Implementei componentes de backend para avaliações e perguntas.
-- Desenvolvi endpoints de cadastro de colaboradores e de dashboard.
-- Corrigi fluxos de cadastro, dashboard, perguntas e avaliações por setor.
-- Alinhei contratos da API, estrutura do banco e comportamento do frontend.
+- **Evolução do banco PostgreSQL:** mantive arquivos de versões e backups do banco, consultas e alterações no esquema para acompanhar as funcionalidades do sistema. Acrescentei tabelas e colunas utilizadas nos fluxos de avaliação e cadastro, considerando sua correspondência com os modelos do backend.
+- **Estrutura do backend de avaliações:** implementei componentes para receber os dados de uma avaliação e associá-la aos colaboradores e às perguntas informadas. Trabalhei com DTOs, entidades e repositórios para representar essas relações e encaminhar a gravação dos dados.
+- **Cadastro de colaboradores:** desenvolvi o endpoint de registro e os dados de entrada do cadastro, incluindo nome, e-mail, senha, crachá, data de admissão, área e perfil. Acrescentei validações de campos obrigatórios, formato de e-mail e tamanho mínimo de senha, além de respostas para indicar criação ou falha no cadastro.
+- **Dados do dashboard:** desenvolvi o endpoint e a estrutura de resposta utilizada pelo painel, reunindo informações como total de colaboradores, avaliações concluídas no mês, pendências e evolução mensal de admissões. Trabalhei nas consultas e na conversão dos resultados para os DTOs consumidos pela interface.
+- **Correções nos fluxos de avaliação:** ajustei a visualização e a criação de perguntas, as avaliações por setor e os dados apresentados para revisão. No retorno das respostas de uma avaliação, por exemplo, tratei a possibilidade de não existir uma opção selecionada antes de acessar seu identificador.
+- **Integração com o frontend:** corrigi o fluxo da tela de cadastro de colaboradores e ajustei a correspondência entre os campos enviados pela interface, os DTOs recebidos pela API e as informações persistidas. Essa atuação exigiu acompanhar a mesma funcionalidade em mais de uma camada da aplicação.
 
 ### Evidências no GitHub
 
@@ -190,8 +212,19 @@ O AllTalent é uma aplicação web para gestão de colaboradores e competências
 
 ### Competências desenvolvidas
 
-**Hard skills:** modelagem relacional, evolução de esquemas, endpoints REST, integração frontend-backend e investigação de inconsistências entre camadas.<br>
-**Soft skills:** visão sistêmica, resolução de problemas, negociação de dependências e colaboração com responsáveis por partes interdependentes.
+**Hard skills**
+
+- **Modelagem relacional e mapeamento de entidades:** trabalhei nas associações entre avaliações, colaboradores e perguntas e na correspondência entre tabelas, colunas e modelos Java. Aprendi a considerar os relacionamentos necessários para persistir uma funcionalidade completa.
+- **Evolução e versionamento do banco PostgreSQL:** mantive alterações do esquema e arquivos de backup junto ao projeto. Desenvolvi a prática de acompanhar mudanças na aplicação com as estruturas de banco necessárias para sustentá-las.
+- **APIs REST e validação de entrada:** implementei endpoints, DTOs e respostas HTTP no cadastro e nas avaliações. As validações de campos e os retornos de erro me ajudaram a definir o que a API aceita e como comunica uma solicitação inválida.
+- **Consultas para indicadores e transformação de resultados:** trabalhei com contagens e agrupamentos destinados ao dashboard e com sua conversão em DTOs. Aprendi a transformar dados persistidos em informações adequadas aos cards e gráficos da interface.
+- **Integração e diagnóstico entre camadas:** as correções no cadastro, nas perguntas e nas avaliações exigiram comparar dados do frontend, contratos da API e modelos persistidos. Desenvolvi a capacidade de investigar uma inconsistência acompanhando o percurso da informação.
+
+**Soft skills**
+
+- **Visão sistêmica:** as mudanças no cadastro e nas avaliações mostraram que um campo ou relacionamento pode afetar banco, backend e frontend. Passei a avaliar uma alteração considerando esse percurso completo.
+- **Resolução de problemas:** ao corrigir fluxos já existentes, exercitei a identificação do ponto em que os dados deixavam de corresponder ao comportamento esperado, como no tratamento de uma resposta sem opção selecionada.
+- **Comunicação técnica e colaboração:** a adequação dos campos do cadastro e dos retornos do dashboard ao consumo da interface reforçou a necessidade de explicitar os dados de entrada e saída para quem trabalha nas partes que dependem da API.
 
 ---
 
@@ -216,13 +249,14 @@ O Tracker centraliza clientes, sistemas, contratos, ativos, técnicos, ordens e 
 
 ### Minhas contribuições
 
-- Criei o endpoint utilizado pela tela de software.
-- Mantive o banco alinhado às entidades e regras do backend.
-- Implementei checklists de ativos.
-- Desenvolvi endpoints de exportação de relatórios em PDF e corrigi o tratamento de parâmetros nulos.
-- Acrescentei filtro de ordens por período.
-- Implementei o CRUD e a persistência de ciclos de embarcação.
-- Desenvolvi o cálculo dinâmico do status do técnico e o cadastro de ausências.
+- **Backend da tela de software:** implementei o endpoint utilizado pela interface e os componentes de persistência relacionados ao catálogo de software e ao seu checklist padrão. Essa contribuição forneceu à tela uma estrutura de backend para trabalhar com esses registros.
+- **Checklist de ativos por ordem de serviço:** implementei entidades, DTOs, repositórios e serviços para associar ativos a uma ordem. O registro contempla informações como técnico, descrição do ativo, indicação de item levado ou devolvido e observação, permitindo acompanhar os materiais vinculados ao atendimento.
+- **Exportação de relatórios em PDF:** desenvolvi endpoints para gerar relatórios e corrigi o tratamento de filtros opcionais. Na consulta de histórico de manutenção, utilizei a Criteria API para acrescentar condições somente quando o parâmetro estivesse preenchido, contemplando filtros como máquina, software, tipo de manutenção, status, criticidade e vencimento.
+- **Consulta de ordens por período:** implementei a busca por data de abertura, validando a presença das datas e impedindo um intervalo com término anterior ao início. Converti o período informado para abranger o começo do primeiro dia e o fim do último, incluindo os registros de todo o intervalo solicitado.
+- **Ciclos de embarcação:** implementei as operações de criação, consulta, atualização e exclusão, com dados de embarcação, chegada, saída e local. Validei que a saída não fosse anterior à chegada e acrescentei a tabela ao banco com chave primária e uma restrição de período que também permite saída ainda não informada.
+- **Disponibilidade dinâmica dos técnicos:** desenvolvi consultas para identificar viagens e manutenções em andamento e utilizei esses resultados no cálculo do status retornado pela API. A regra considera viagem ativa antes de atendimento e preserva a indisponibilidade manual quando não há atividade em curso. Acrescentei testes unitários para os cenários de viagem, ordem ativa, histórico de manutenção, ausência de atividade e indisponibilidade manual.
+- **Ausências e agendamento:** implementei o cadastro de ausências dos técnicos e sua integração com as ordens de serviço. Acrescentei a verificação de ausência ativa na data agendada para impedir a seleção de um técnico ausente e considerei a ausência atual na atualização de disponibilidade.
+- **Alinhamento entre banco e backend:** atualizei os scripts de banco para acompanhar as entidades e regras implementadas, incluindo a persistência de ciclos de embarcação. Esse trabalho conectou a estrutura SQL às operações disponibilizadas pelos serviços.
 
 ### Evidências no GitHub
 
@@ -238,8 +272,22 @@ O Tracker centraliza clientes, sistemas, contratos, ativos, técnicos, ordens e 
 
 ### Competências desenvolvidas
 
-**Hard skills:** desenho de APIs, evolução de esquema, geração de documentos, filtros temporais e modelagem de regras de disponibilidade.<br>
-**Soft skills:** pensamento sistêmico, priorização, rastreabilidade, responsabilidade pelas entregas e análise de impactos entre diferentes áreas do produto.
+**Hard skills**
+
+- **Organização de funcionalidades em camadas:** implementei fluxos com endpoints, DTOs, serviços, entidades e repositórios, como no checklist de ativos e nos ciclos de embarcação. Aprendi a distribuir recepção de dados, regras de negócio e persistência entre os componentes do backend.
+- **Consultas dinâmicas e filtros opcionais:** utilizei a Criteria API para montar a consulta de manutenção de acordo com os parâmetros presentes. A correção dos filtros nulos aprofundou minha compreensão de consultas que precisam funcionar com diferentes combinações de critérios.
+- **Tratamento de datas e regras temporais:** trabalhei com limites de dias na consulta de ordens, validação de chegada e saída nos ciclos e verificação de ausência na data do agendamento. Aprendi que uma regra de período precisa explicitar limites e situações em que uma data ainda não foi preenchida.
+- **Integridade de dados no PostgreSQL:** acrescentei a estrutura de ciclos ao script do banco e uma restrição que impede saída anterior à chegada. Desenvolvi a prática de sustentar uma regra tanto no serviço quanto na persistência.
+- **Modelagem de disponibilidade operacional:** combinei consultas de viagens, ordens e históricos de manutenção para calcular o status do técnico. Essa atividade exigiu definir a precedência entre situações e considerar o efeito das ausências sobre o agendamento.
+- **Testes unitários de regras de negócio:** utilizei JUnit e Mockito nos testes de disponibilidade, simulando os retornos dos repositórios para verificar cada cenário. Aprendi a conferir o resultado da regra sem depender de um banco em execução.
+- **Geração de documentos a partir de dados filtrados:** implementei a exportação em PDF articulando consulta e geração do relatório, considerando que os critérios recebidos devem determinar os registros apresentados no documento.
+
+**Soft skills**
+
+- **Pensamento sistêmico e análise de impacto:** a disponibilidade do técnico depende de viagens, manutenções e ausências, e afeta o agendamento de ordens. Ao conectar essas regras, exercitei a análise de como uma alteração em um módulo repercute nos demais.
+- **Atenção a situações de exceção:** filtros ausentes, períodos invertidos, saída ainda não registrada e indisponibilidade manual exigiram considerar cenários além do preenchimento completo dos dados. Essa prática reforçou o cuidado com comportamentos que poderiam passar despercebidos.
+- **Responsabilidade pela entrega:** a implementação do status dinâmico incluiu testes para conferir seus diferentes resultados. Desenvolvi o hábito de sustentar uma alteração com verificações do comportamento esperado.
+- **Organização e rastreabilidade:** as contribuições registradas nos commits permitem relacionar endpoints, ajustes SQL, correções e testes às funcionalidades correspondentes. Esse registro ajuda a explicar o que foi entregue e a localizar mudanças posteriores.
 
 ---
 
